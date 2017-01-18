@@ -2,10 +2,13 @@
 
 set -e
 
+echo "Sleeping for one hour"
+sleep 1h
+
 if [ "$FAIL" ]; then
   echo "Failing..."
-  exec /bin/false
+  /bin/false
 else
   echo "Build successful..."
-  exec /bin/true
+  /bin/true
 fi
